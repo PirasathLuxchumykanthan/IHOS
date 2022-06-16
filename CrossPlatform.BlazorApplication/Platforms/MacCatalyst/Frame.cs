@@ -12,8 +12,10 @@ namespace CrossPlatform.BlazorApplication.Platforms.maccatalyst
         public static void Settings(Microsoft.Maui.Handlers.IWindowHandler handler)
         {
 
-            var a = handler.PlatformView;
-         
+            var nativeWindow = handler.PlatformView;
+            nativeWindow.WindowScene.Title = "OBJECT:SOCIAL";
+            nativeWindow.WindowScene.Titlebar.TitleVisibility = UIKit.UITitlebarTitleVisibility.Hidden;
+            nativeWindow.SizeThatFits(new CoreGraphics.CGSize(300, 300));
         }
     }
 }
