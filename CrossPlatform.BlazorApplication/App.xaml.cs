@@ -10,13 +10,16 @@ public partial class App : Application
 		MainPage = new MainPage();
         Microsoft.Maui.Handlers.WindowHandler.Mapper.AppendToMapping(nameof(IWindow), (handler, view) =>
         {
-         ;
+
 
 #if WINDOWS
-    Frame.Settings(handler);
-#endif
-        });
+    CrossPlatform.BlazorApplication.Platfrom.windows.Frame.Settings(handler);
+#elif MACCATALYST
 
+#endif
+
+        });
+       
     }
 
 
