@@ -2,11 +2,12 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CrossPlatform.BlazorApplication"
-             x:Class="CrossPlatform.BlazorApplication.App">
+             x:Class="CrossPlatform.BlazorApplication.App" NavigationPage.HasNavigationBar="False">
+
     <Application.Resources>
         <ResourceDictionary>
 
-            <Color x:Key="PageBackgroundColor">#512bdf</Color>
+            <Color x:Key="PageBackgroundColor">#000000</Color>
             <Color x:Key="PrimaryTextColor">White</Color>
 
             <Style TargetType="Label">

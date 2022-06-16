@@ -6,4 +6,5 @@ namespace CrossPlatform.BlazorApplication;
 public class AppDelegate : MauiUIApplicationDelegate
 {
 	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+	
 }

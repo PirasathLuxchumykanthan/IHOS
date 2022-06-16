@@ -17,8 +17,24 @@ public partial class App : MauiWinUIApplication
 	public App()
 	{
 		this.InitializeComponent();
+
+			
+	}
+	protected override bool IsOverridableInterface(Guid iid)
+	{
+	
+
+        return base.IsOverridableInterface(iid);
+	}
+	protected override void OnLaunched(LaunchActivatedEventArgs args)
+	{
+	
+        base.OnLaunched(args);
 	}
 
-	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+	protected override MauiApp CreateMauiApp() {
+
+        return MauiProgram.CreateMauiApp();
+    }
 }
 
