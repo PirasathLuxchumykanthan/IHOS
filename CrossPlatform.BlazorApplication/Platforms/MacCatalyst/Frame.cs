@@ -12,7 +12,8 @@ namespace CrossPlatform.BlazorApplication.Platforms.maccatalyst
         public static void Settings(Microsoft.Maui.Handlers.IWindowHandler handler)
         {
 
-            handler.PlatformView.WindowScene.Titlebar.Toolbar.Visible = false;
+            var a = handler.PlatformView;
+         
         }
     }
 }

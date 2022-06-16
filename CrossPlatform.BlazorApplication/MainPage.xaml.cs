@@ -10,6 +10,6 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		this.OnSizeAllocated(5000, 500);
+	
     }
 }
