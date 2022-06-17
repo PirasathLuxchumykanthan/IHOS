@@ -13,7 +13,7 @@ namespace CrossPlatform.BlazorApplication.Platforms.maccatalyst
         {
 
             var nativeWindow = handler.PlatformView;
-            nativeWindow.WindowScene.Title = "OBJECT:SOCIAL";
+            nativeWindow.WindowScene.n.Title = "OBJECT:SOCIAL";
             nativeWindow.WindowScene.Titlebar.TitleVisibility = UIKit.UITitlebarTitleVisibility.Hidden;
             nativeWindow.SizeThatFits(new CoreGraphics.CGSize(300, 300));
         }
