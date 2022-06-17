@@ -12,7 +12,7 @@ public class AppDelegate : MauiUIApplicationDelegate
 	}
 	public override void OnActivated(UIApplication application)
 	{
-		application.InputAccessoryView.TintColor = UIColor.White;
+		this.Window.WindowScene.Titlebar.TitleVisibility = UITitlebarTitleVisibility.Hidden;
 		base.OnActivated(application);
 	}
 

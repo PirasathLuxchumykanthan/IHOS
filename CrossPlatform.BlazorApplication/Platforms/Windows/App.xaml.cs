@@ -29,6 +29,7 @@ public partial class App : MauiWinUIApplication
 	protected override void OnLaunched(LaunchActivatedEventArgs args)
 	{
 	
+		
         base.OnLaunched(args);
 	}
 
