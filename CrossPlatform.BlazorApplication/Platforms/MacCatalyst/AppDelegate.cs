@@ -9,8 +9,11 @@ public class AppDelegate : MauiUIApplicationDelegate
 	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 	public AppDelegate() {
 
-		this.GetWindow().Window.TintColor = UIColor.White;
 	}
-
+	public override void OnActivated(UIApplication application)
+	{
+		application.InputAccessoryView.TintColor = UIColor.White;
+		base.OnActivated(application);
+	}
 
 }
