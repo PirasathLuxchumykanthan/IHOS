@@ -7,9 +7,9 @@ namespace CrossPlatform.BlazorApplication;
 public class AppDelegate : MauiUIApplicationDelegate
 {
 	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-	public AppDelegate() { 
+	public AppDelegate() {
 
-		this.InputView.TintColor = UIColor.White;
+		this.GetWindow().Window.TintColor = UIColor.White;
 	}
 
 
