@@ -4,11 +4,9 @@
              xmlns:local="clr-namespace:CrossPlatform.BlazorApplication"
              x:Class="CrossPlatform.BlazorApplication.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}" NavigationPage.HasNavigationBar="False">
-
     <BlazorWebView HostPage="wwwroot/index.html">
         <BlazorWebView.RootComponents>
             <RootComponent Selector="#app" ComponentType="{x:Type local:Main}" />
         </BlazorWebView.RootComponents>
     </BlazorWebView>
-
 </ContentPage>

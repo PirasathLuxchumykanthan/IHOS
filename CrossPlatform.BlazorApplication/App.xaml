@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CrossPlatform.BlazorApplication"
              x:Class="CrossPlatform.BlazorApplication.App" NavigationPage.HasNavigationBar="False">
-
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="PageBackgroundColor">#000000</Color>

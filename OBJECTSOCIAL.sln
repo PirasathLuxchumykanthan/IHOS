@@ -4,11 +4,11 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossPlatform.BlazorApplication", "CrossPlatform.BlazorApplication\CrossPlatform.BlazorApplication.csproj", "{AC3DEA64-3209-41EF-8D41-CB36F651C288}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.BlazorWebAssembly.Server", "WebSite.BlazorWebAssembly\Server\WebSite.BlazorWebAssembly.Server.csproj", "{97BFF643-A4E2-423F-82EF-A9EB160460BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite.BlazorWebAssembly.Server", "WebSite.BlazorWebAssembly\Server\WebSite.BlazorWebAssembly.Server.csproj", "{97BFF643-A4E2-423F-82EF-A9EB160460BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite.BlazorWebAssembly.Client", "WebSite.BlazorWebAssembly\Client\WebSite.BlazorWebAssembly.Client.csproj", "{CBA46D64-BDEB-4BE3-BDEF-BA766BA0E9A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite.BlazorWebAssembly.Client", "WebSite.BlazorWebAssembly\Client\WebSite.BlazorWebAssembly.Client.csproj", "{CBA46D64-BDEB-4BE3-BDEF-BA766BA0E9A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.RazorClassLibray", "Shared.RazorClassLibray\Shared.RazorClassLibray.csproj", "{D5FB3E53-A31F-4323-93C1-F385A01EE445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.RazorClassLibray", "Shared.RazorClassLibray\Shared.RazorClassLibray.csproj", "{D5FB3E53-A31F-4323-93C1-F385A01EE445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
