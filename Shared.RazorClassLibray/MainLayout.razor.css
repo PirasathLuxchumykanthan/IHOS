@@ -1,0 +1,91 @@
+﻿
+@keyframes task-0 {
+    0% {
+        width: 250px;
+        height: 250px;
+        top: calc(50% - 125px);
+        right: calc(50% - 125px);
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        right: 20px;
+    }
+}
+div.ui-logo[data-loader="Finnish"], div.ui-logo[data-loader="Loading"] {
+    animation: task-0 ease 2s forwards;
+    cursor: pointer;
+}
+div.ui-logo[data-loader="StartUp"] {
+    animation: task-0 ease 2s backwards;
+}
+@keyframes task-1 {
+    0% {
+        margin: 0 3px 0 3px;
+        height: 49px;
+        width: 49px;
+    }
+
+    100% {
+        margin: 0 1px 0 1px;
+        height: 24px;
+        width: 24px;
+    }
+}
+
+div.ui-device-store[data-loader="Finnish"] div,
+div.ui-device-store[data-loader="Loading"] div {
+    animation: task-1 ease 2s forwards;
+    cursor:pointer;
+}
+div.ui-device-store[data-loader="StartUp"] div {
+    animation: task-1 ease 2s backwards;
+    cursor: pointer;
+}
+@keyframes task-2 {
+    0% {
+        right: calc(50% - 82.5px);
+        bottom: 20px
+    }
+
+    100% {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+div.ui-device-store[data-loader="Finnish"],
+div.ui-device-store[data-loader="Loading"] {
+    animation: task-2 ease 2s forwards;
+}
+div.ui-device-store[data-loader="StartUp"]{
+    animation: task-2 ease 2s backwards;
+}
+
+
+@keyframes task-3 {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:0.5;
+    }
+    99% {
+        opacity:0;
+        display:inline;
+    }
+    100% {
+        opacity:0;
+        display:none;
+    }
+}
+
+div.ui-slogan[data-loader="Finnish"],
+div.ui-slogan[data-loader="Loading"] {
+    animation: task-3 ease 2s forwards;
+}
+
+div.ui-slogan[data-loader="StartUp"] {
+    animation: task-3 ease 2s backwards;
+}

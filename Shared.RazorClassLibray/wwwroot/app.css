@@ -1,4 +1,84 @@
-﻿body
+﻿@font-face {
+    font-family: 'square_sans_serif_7regular';
+    src: url('square_sans_serif_7.woff2') format('woff2'), url('square_sans_serif_7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin:0;padding:0;
+}
+body
 {
     background:#000;
+}
+main {
+    position:absolute;
+    height:100%;
+    width:100%;
+}
+main[data-blazor="webassembly"] {
+    min-height: 750px;
+    min-width: 350px;
+}
+div.ui-logo {
+    position: absolute;
+    background: url('ui/logo.png') no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    top: calc(50% - 125px);
+    right: calc(50% - 125px);
+}
+@keyframes task-0 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+div.ui-progressbar {
+    background: repeating-linear-gradient(to right, red 0%, blue 50%, red 100%);
+    width: 100%;
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: task-0 2s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+}
+div.ui-device-store {
+    position:absolute;
+    right:calc(50% - 82.5px);
+    bottom:20px;
+}
+div.ui-device-store div {
+    margin:0 3px 0 3px;
+    float:left;
+    height:49px;
+    width:49px;
+    background-size:cover;
+    background-image:url("device/store/google.png");
+}
+div.ui-device-store div:nth-child(2){
+    background-image: url("device/store/windows.png");
+}
+div.ui-device-store div:nth-child(3) {
+    background-image: url("device/store/apple.png");
+}
+div.ui-slogan {
+    opacity: 1;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    font-family: square_sans_serif_7regular;
+    text-align: center;
+    font-size: 16px;
+}
+div.ui-slogan span {
+    font-size: 10px;
 }

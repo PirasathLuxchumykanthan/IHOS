@@ -1,2 +1,31 @@
 ﻿@inherits LayoutComponentBase
+<div class="ui-logo" data-loader="@Loader.Status"></div>
+<div class="ui-slogan" data-loader="@Loader.Status">connecting together</div>
+@if (Device.Type.Equals(device.Type.Browser))
+{
+    <div class="ui-device-store" data-loader="@Loader.Status">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+}
+@if (!Loader.Status.Equals(loader.Status.Finnish))
+{
+    <div class="ui-progressbar"></div>
+}
+
 @Body
+
+@code{
+    protected override Task OnInitializedAsync()
+    {
+        Loader.Handler += this.StateHasChanged;
+        Loader.Loading(this.GetType(), true);
+        return base.OnInitializedAsync();
+    }
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {
+        Loader.Finnish(this.GetType());
+        return base.OnAfterRenderAsync(firstRender);
+    }
+}
