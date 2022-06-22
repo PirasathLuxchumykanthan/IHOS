@@ -1,6 +1,13 @@
 ﻿@inherits LayoutComponentBase
 <div class="ui-logo" data-loader="@Loader.Status"></div>
-<div class="ui-slogan" data-loader="@Loader.Status">connecting together</div>
+<div class="ui-slogan" data-loader="@Loader.Status">
+    connecting together
+    @if ( Network.Status.Equals(RazorClassLibray.network.Status.Offline))
+    {
+        <br/>
+        <span>But only via the internet</span>
+    }
+</div>
 @if (Device.Type.Equals(device.Type.Browser))
 {
     <div class="ui-device-store" data-loader="@Loader.Status">
@@ -13,7 +20,7 @@
 {
     <div class="ui-progressbar"></div>
 }
-
+<input type="text" value="@Definition.ISO639"/>
 @Body
 
 @code{

@@ -1,5 +1,4 @@
-﻿
-@keyframes task-0 {
+﻿@keyframes task-0 {
     0% {
         width: 250px;
         height: 250px;
@@ -13,7 +12,8 @@
         right: 20px;
     }
 }
-div.ui-logo[data-loader="Finnish"], div.ui-logo[data-loader="Loading"] {
+div.ui-logo[data-loader="Finnish"],
+div.ui-logo[data-loader="Loading"] {
     animation: task-0 ease 2s forwards;
     cursor: pointer;
 }
@@ -33,7 +33,6 @@ div.ui-logo[data-loader="StartUp"] {
         width: 24px;
     }
 }
-
 div.ui-device-store[data-loader="Finnish"] div,
 div.ui-device-store[data-loader="Loading"] div {
     animation: task-1 ease 2s forwards;
@@ -54,7 +53,6 @@ div.ui-device-store[data-loader="StartUp"] div {
         bottom: 10px;
     }
 }
-
 div.ui-device-store[data-loader="Finnish"],
 div.ui-device-store[data-loader="Loading"] {
     animation: task-2 ease 2s forwards;
@@ -62,8 +60,6 @@ div.ui-device-store[data-loader="Loading"] {
 div.ui-device-store[data-loader="StartUp"]{
     animation: task-2 ease 2s backwards;
 }
-
-
 @keyframes task-3 {
     0% {
         opacity:1;
@@ -80,12 +76,13 @@ div.ui-device-store[data-loader="StartUp"]{
         display:none;
     }
 }
-
 div.ui-slogan[data-loader="Finnish"],
 div.ui-slogan[data-loader="Loading"] {
     animation: task-3 ease 2s forwards;
 }
-
 div.ui-slogan[data-loader="StartUp"] {
     animation: task-3 ease 2s backwards;
+}
+div.ui-slogan span{
+    font-size:10px;
 }

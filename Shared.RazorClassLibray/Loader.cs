@@ -14,8 +14,8 @@ namespace Shared.RazorClassLibray
             add => _Handler += value;
             remove => _Handler -= value;
         }
-        public loader.Status Status { 
-            get => _Status;
+        public loader.Status Status {
+            get => this.Network.Status.Equals(network.Status.StartUp | network.Status.Offline) ? loader.Status.StartUp : _Status;
             private set {
                 if (_Status != value)
                 {
@@ -24,6 +24,11 @@ namespace Shared.RazorClassLibray
                 }
             }
         }
+        private readonly Network Network;
+        public Loader(Network Network) {
+            this.Network = Network;
+            this.Network.Handler += () => _Handler?.Invoke();
+            }
         private List<string> Names { get; } = new List<string>();
         private string GetName(Type type) => $"{type.Assembly}.{type.Namespace}.{type.Name}";
         public void Finnish(Type type) => this.Finnish(GetName(type));
