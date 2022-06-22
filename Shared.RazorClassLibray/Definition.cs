@@ -8,6 +8,6 @@ namespace Shared.RazorClassLibray
 {
     public interface Definition
     {
-        public string ISO639 { get; }
+        public string TwoLetterISO639 { get; }
     }
 }

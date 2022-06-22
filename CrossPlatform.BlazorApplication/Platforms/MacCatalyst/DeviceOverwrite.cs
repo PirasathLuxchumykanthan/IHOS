@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CrossPlatform.BlazorApplication;
 
-public class Device : Shared.RazorClassLibray.Device
+public class DeviceOverwrite : Shared.RazorClassLibray.Device
 {
-    public Shared.RazorClassLibray.device.Type Type => Shared.RazorClassLibray.device.Type.Windows;
+    public Shared.RazorClassLibray.device.Type Type => Shared.RazorClassLibray.device.Type.MacCatalyst;
 
 
 }

@@ -2,7 +2,7 @@
 
 namespace WebSite.BlazorWebAssembly.Client
 {
-    public class Definition:Shared.RazorClassLibray.Definition
+    public class DefinitionOverwrite: Shared.RazorClassLibray.DefinitionOverwrite
     {
         public string ISO639 => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
     }

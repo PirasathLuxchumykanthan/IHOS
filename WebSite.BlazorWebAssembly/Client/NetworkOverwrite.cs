@@ -2,7 +2,7 @@
 using Shared.RazorClassLibray.network;
 
 namespace WebSite.BlazorWebAssembly.Client;
-public class Network : Shared.RazorClassLibray.Network, IDisposable
+public class NetworkOverwrite : Shared.RazorClassLibray.Network, IDisposable
 {
     private Status _Status = Status.Online;
     public Status Status {
@@ -25,14 +25,13 @@ public class Network : Shared.RazorClassLibray.Network, IDisposable
         add => _Handler += value;
         remove => _Handler -= value;
     }
-    private DotNetObjectReference<Network>? ObjectReference { get; set; }
+    private DotNetObjectReference<NetworkOverwrite>? ObjectReference { get; set; }
     private IJSObjectReference? JSObjectReference { get; set; }
 
-    public Network(IJSRuntime JSRuntime)
+    public NetworkOverwrite(IJSRuntime JSRuntime)
     {
         JSRuntime.InvokeAsync<IJSObjectReference>("import", $"/Network.js").AsTask().ContinueWith(a => {
-            (JSObjectReference = a.Result)
-            .InvokeVoidAsync("JS", ObjectReference = DotNetObjectReference.Create(this));
+            (JSObjectReference = a.Result).InvokeVoidAsync("JS", ObjectReference = DotNetObjectReference.Create(this));
         });
 
     }

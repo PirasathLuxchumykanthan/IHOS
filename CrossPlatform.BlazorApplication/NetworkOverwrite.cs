@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CrossPlatform.BlazorApplication;
-public class Network : Shared.RazorClassLibray.Network
+public class NetworkOverwrite : Shared.RazorClassLibray.Network
 {
     private Status _Status = Status.StartUp;
     public Status Status { 
@@ -27,7 +27,7 @@ public class Network : Shared.RazorClassLibray.Network
         add => _Handler += value;
         remove => _Handler -= value;
     }
-    public Network() {
+    public NetworkOverwrite() {
         this.Hardware();
         Connectivity.ConnectivityChanged += (s, e) => Hardware();
     }
