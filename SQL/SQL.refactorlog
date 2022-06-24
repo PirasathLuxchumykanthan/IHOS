@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="1b229ffd-9ad9-4e6d-9149-a8930c8ea451" ChangeDateTime="06/23/2022 10:15:55">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9eb9ebba-530c-4b71-93a3-5fa886c5d659" ChangeDateTime="06/23/2022 10:17:43">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Data.ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8ae4113e-a0e3-4010-a559-a1ef4f1c6d83" ChangeDateTime="06/23/2022 10:17:52">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[Data.ID]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5ebb2533-fef1-4efe-b4d9-3f565dec1cf8" ChangeDateTime="06/23/2022 15:02:10">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[ISO640]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TwoLetterISO639" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cdee5838-3232-4583-b5ce-c6b298dbd300" ChangeDateTime="06/23/2022 19:31:47">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[Device.Type]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DeviceType" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0cbf7567-37c1-4315-80e2-aa34b9f9bb5b" ChangeDateTime="06/23/2022 19:31:51">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[Stock.Status]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StockStatus" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5d8c011d-dab1-49ae-a83d-bcd20b2fa6d0" ChangeDateTime="06/23/2022 19:31:54">
+    <Property Name="ElementName" Value="[dbo].[Blazor].[Security.Key]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Blazor]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SecurityKey" />
+  </Operation>
+</Operations>

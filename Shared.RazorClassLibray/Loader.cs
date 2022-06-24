@@ -20,7 +20,7 @@ namespace Shared.RazorClassLibray
                 if (_Status != value)
                 {
                     _Status = value;
-                    this._Handler?.Invoke();
+                    _Handler?.Invoke();
                 }
             }
         }
@@ -29,8 +29,8 @@ namespace Shared.RazorClassLibray
             this.Network = Network;
             this.Network.Handler += () => _Handler?.Invoke();
             }
-        private List<string> Names { get; } = new List<string>();
-        private string GetName(Type type) => $"{type.Assembly}.{type.Namespace}.{type.Name}";
+        public List<string> Names { get; } = new List<string>();
+        private string GetName(Type type) => $"{type.Namespace}.{type.Name}";
         public void Finnish(Type type) => this.Finnish(GetName(type));
         public void Finnish(Type type, string AddOnID) => this.Finnish($"{GetName(type)}[{AddOnID}]");
         public void Finnish(string Name)

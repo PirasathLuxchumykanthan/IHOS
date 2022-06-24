@@ -33,7 +33,6 @@ public class NetworkOverwrite : Shared.RazorClassLibray.Network, IDisposable
         JSRuntime.InvokeAsync<IJSObjectReference>("import", $"/Network.js").AsTask().ContinueWith(a => {
             (JSObjectReference = a.Result).InvokeVoidAsync("JS", ObjectReference = DotNetObjectReference.Create(this));
         });
-
     }
     public void Dispose()
     {

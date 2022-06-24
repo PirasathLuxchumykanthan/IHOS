@@ -20,13 +20,13 @@
 {
     <div class="ui-progressbar"></div>
 }
-<input type="text" value="@Definition.ISO639"/>
+<input type="text" value="@Definition.TimeZone"/>
 @Body
 
 @code{
     protected override Task OnInitializedAsync()
     {
-        Loader.Handler += this.StateHasChanged;
+        Loader.Handler += () => InvokeAsync(this.StateHasChanged);
         Loader.Loading(this.GetType(), true);
         return base.OnInitializedAsync();
     }

@@ -1,12 +1,16 @@
 using Microsoft.AspNetCore.ResponseCompression;
-
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+ 
+builder.Services.AddSignalR();
 
+builder.Services.AddDbContextFactory<Shared.EntityFramework.DBContext>(
+ o =>o.UseSqlServer(@"Data Source=OBJECTSOCIAL;Initial Catalog=SQL.OS;Integrated Security=True"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +29,7 @@ app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
-
+app.MapHub<WebSite.BlazorWebAssembly.Server.ApplicationServices>("/ApplicationServices");
 app.UseRouting();
 
 
