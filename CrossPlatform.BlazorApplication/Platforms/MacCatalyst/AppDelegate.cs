@@ -13,6 +13,7 @@ public class AppDelegate : MauiUIApplicationDelegate
 	public override void OnActivated(UIApplication application)
 	{
 		this.Window.WindowScene.Titlebar.TitleVisibility = UITitlebarTitleVisibility.Hidden;
+		
 		base.OnActivated(application);
 	}
 

@@ -16,7 +16,7 @@
 		<ApplicationTitle>OBJECT:SOCIAL</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.crossplatform.blazorapplication</ApplicationId>
+		<ApplicationId>app.social.object</ApplicationId>
 		<ApplicationIdGuid>819AA523-B185-425E-9699-ADEC0AFFB5EE</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -57,5 +57,7 @@
 	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
 	  </Content>
 	</ItemGroup>
+
+	<ProjectExtensions><VisualStudio><UserProperties XamarinHotReloadDebuggerExceptionCrossPlatformBlazorApplicationHideInfoBar="True" /></VisualStudio></ProjectExtensions>
 
 </Project>

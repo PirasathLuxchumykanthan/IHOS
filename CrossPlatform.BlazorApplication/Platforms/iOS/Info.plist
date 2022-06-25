@@ -32,5 +32,7 @@
 	<true/>
 	<key>UIRequiresFullScreen</key>
 	<true/>
+	<key>CFBundleIdentifier</key>
+	<string>app.social.object</string>
 </dict>
 </plist>
