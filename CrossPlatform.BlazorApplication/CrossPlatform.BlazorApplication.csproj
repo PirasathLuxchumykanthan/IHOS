@@ -31,6 +31,24 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
+	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios|AnyCPU'">
+	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-maccatalyst|AnyCPU'">
+	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
+	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	</PropertyGroup>
+
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon ForegroundFile="Resources\AppIcon\appicon.png" Include="Resources\AppIcon\appicon.svg" BaseSize="540,540" />
