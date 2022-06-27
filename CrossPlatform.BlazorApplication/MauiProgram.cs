@@ -8,6 +8,12 @@ public static class MauiProgram
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder.UseMauiApp<App>();
+		builder.ConfigureMauiHandlers(a => { 
+		
+	
+		}); ;
+		builder.Services.AddScoped<ISecureStorage>();
+
 		builder.Services.AddScoped<Shared.RazorClassLibray.Device, DeviceOverwrite>();
 		builder.Services.AddScoped<Shared.RazorClassLibray.Network,NetworkOverwrite>();
 		builder.Services.AddScoped<Shared.RazorClassLibray.Definition>();

@@ -29,24 +29,18 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<ProvisioningType>automatic</ProvisioningType>
+		<ProvisioningType>manual</ProvisioningType>
+		<SignAssembly>False</SignAssembly>
+		<CodesignKey>Apple Distribution: OBJECT:SOCIAL ApS (C786832DJN)</CodesignKey>
+		<CodesignEntitlements>$(AppIdentifierPrefix)Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
-	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
+	  <CodesignEntitlements>$(iOSProjectFolder)Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-ios|AnyCPU'">
-	  <CodesignEntitlements>Platforms\iOS\Entitlements.plist</CodesignEntitlements>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-maccatalyst|AnyCPU'">
-	  <CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-maccatalyst|AnyCPU'">
-	  <CodesignEntitlements>Platforms\MacCatalyst\Entitlements.plist</CodesignEntitlements>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
+	  <CodesignEntitlements>$(AppIdentifierPrefix)Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
 
@@ -60,15 +54,17 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+
+	
 	<ItemGroup>
 	  <ProjectReference Include="..\Shared.RazorClassLibray\Shared.RazorClassLibray.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Platforms\Android\DeviceOverwrite.cs">
-	    <ExcludeFromCurrentConfiguration>true</ExcludeFromCurrentConfiguration>
-	  </Compile>
+	  <Resource Include="Platforms\iOS\Entitlements.plist" />
 	</ItemGroup>
+
+	
 
 	<ItemGroup>
 	  <Content Update="wwwroot\favicon.ico">
