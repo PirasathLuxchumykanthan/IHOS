@@ -13,6 +13,6 @@ public class Program
      
 
         UIApplication.Main(args, null, typeof(AppDelegate));
-
+        Microsoft.Maui.Storage.FileSystem.Current.c
 	}
 }
