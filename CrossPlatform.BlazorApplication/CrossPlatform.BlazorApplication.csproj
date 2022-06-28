@@ -32,7 +32,7 @@
 		<ProvisioningType>manual</ProvisioningType>
 		<SignAssembly>False</SignAssembly>
 		<CodesignKey>Apple Distribution: OBJECT:SOCIAL ApS (C786832DJN)</CodesignKey>
-		<CodesignEntitlements>$(AppIdentifierPrefix)Entitlements.plist</CodesignEntitlements>
+		<CodesignEntitlements>$(iOSProjectFolder)Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
 
@@ -45,6 +45,9 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	
+	
+
 	</ItemGroup>
 
 

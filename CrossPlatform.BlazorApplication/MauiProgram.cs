@@ -11,7 +11,7 @@ public static class MauiProgram
 	
 
 
-		builder.Services.AddScoped<Shared.RazorClassLibray.Device, DeviceOverwrite>();
+		builder.Services.AddScoped<Shared.RazorClassLibray.Device,DeviceOverwrite>();
 		builder.Services.AddScoped<Shared.RazorClassLibray.Network,NetworkOverwrite>();
 		builder.Services.AddScoped<Shared.RazorClassLibray.Definition>();
 		builder.Services.AddScoped<Shared.RazorClassLibray.Connection, ConnectionOverwrite>(); 
