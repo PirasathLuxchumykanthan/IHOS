@@ -35,13 +35,6 @@
 		<CodesignEntitlements>$(AppIdentifierPrefix)Entitlements.plist</CodesignEntitlements>
 	</PropertyGroup>
 
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-android|AnyCPU'">
-	  <CodesignEntitlements>$(iOSProjectFolder)Entitlements.plist</CodesignEntitlements>
-	</PropertyGroup>
-
-	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-android|AnyCPU'">
-	  <CodesignEntitlements>$(AppIdentifierPrefix)Entitlements.plist</CodesignEntitlements>
-	</PropertyGroup>
 
 
 	<ItemGroup>
